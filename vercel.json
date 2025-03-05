@@ -1,0 +1,4 @@
+{
+  "corepack": true,
+  "buildCommand": "pnpm run build"
+}
