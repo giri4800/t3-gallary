@@ -4,10 +4,11 @@ import Link from "next/link";
 import {db} from "pnpm/server/db/index";
 import { SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { SignedIn } from "@clerk/nextjs";
+import { myimages } from "pnpm/server/queries";
 
 
 export default async function HomePage() {
-  const posts = await db.query.images.findMany();
+  const posts = await myimages();
   console.log(posts);
 
   return (
